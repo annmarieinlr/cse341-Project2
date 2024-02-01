@@ -1,0 +1,21 @@
+[
+    {
+      "title": "Mistborn",
+      "authorFirstName": "Brandon",
+      "authorLastName": "Sanderson",
+      "genre": "Fantasy",
+      "publisher": "Tor Books",
+      "series": "Yes",
+      "yearPublished": "2006"
+    },
+    {
+        "title": "Odd Thomas",
+        "authorFirstName": "Dean",
+        "authorLastName": "Koontz",
+        "genre": "Thriller",
+        "publisher": "Bantam Publishing",
+        "series": "Yes",
+        "yearPublished": "2003"
+    }
+  ]
+  
