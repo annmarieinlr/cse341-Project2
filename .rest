@@ -5,3 +5,13 @@ GET https://libraryrender.onrender.com/books HTTP/1.1
 
 ###
 GET https://libraryrender.onrender.com/books HTTP/1.1
+
+###
+POST http://localhost:8080/authors HTTP/1.1
+Content-Type: application/json
+
+ {
+      "firstName": "John",
+      "lastName": "Flanagan",
+      "genre": "Fantasy"
+}
