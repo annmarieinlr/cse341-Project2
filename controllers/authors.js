@@ -41,7 +41,7 @@ const getSingle = async (req, res, next) => {
 //Create new author
 
 const newAuthor = async (req, res) => {
-  const book = {
+  const author = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     genre: req.body.genre

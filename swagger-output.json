@@ -2,13 +2,13 @@
   "swagger": "2.0",
   "info": {
     "title": "My API",
-    "description": "Description",
+    "description": "Library api",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "libraryrender.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/api-docs": {

@@ -1,1 +1,7 @@
-GET http://localhost:8080 HTTP/1.1
+GET http://localhost:8080/authors HTTP/1.1
+
+###
+GET https://libraryrender.onrender.com/books HTTP/1.1
+
+###
+GET https://libraryrender.onrender.com/books HTTP/1.1
