@@ -1,17 +1,40 @@
+GET http://localhost:8080/books HTTP/1.1
+
+###
 GET http://localhost:8080/authors HTTP/1.1
 
 ###
 GET https://libraryrender.onrender.com/books HTTP/1.1
 
 ###
-GET https://libraryrender.onrender.com/books HTTP/1.1
+GET https://libraryrender.onrender.com/authors HTTP/1.1
+
+###
+GET https://libraryrender.onrender.com/books/65c63da0be904871c15a71f4 HTTP/1.1
+
+###
+DELETE https://libraryrender.onrender.com/authors/65c70e9a0c39fd0e3e49d90c HTTP/1.1
+
+###
+POST http://localhost:8080/books HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Fake Title",
+    "authorFirstName": "Fake",
+    "authorLastName": "Author",
+    "genre": "Fantasy",
+    "publisher": "Scholastic",
+    "series": "no",
+    "yearPublished": "2024"
+}
 
 ###
 POST http://localhost:8080/authors HTTP/1.1
 Content-Type: application/json
 
  {
-      "firstName": "John",
-      "lastName": "Flanagan",
-      "genre": "Fantasy"
+      "firstName": "Steve",
+      "lastName": "Ruskin",
+      "genre": "Thrillers"
 }
