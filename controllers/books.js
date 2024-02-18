@@ -49,7 +49,13 @@ const getSingle = async (req, res, next) => {
 // Create new book
 
 const newBook = async (req, res, next) => {
+  
   try {
+  // Validate book data
+  if (!req.body.title || !req.body.authorFirstName || !req.body.authorLastName || !req.body.genre || !req.body.publisher || !req.body.series || !req.body.yearPublished) {
+    res.status(400).json({ error: "Missing required fields" });
+    return;
+  }
     const book = {
       title: req.body.title,
       authorFirstName: req.body.authorFirstName,
@@ -60,11 +66,7 @@ const newBook = async (req, res, next) => {
       yearPublished: req.body.yearPublished
     };
 
-    // Validate book data
-    if (!book.title || !book.authorFirstName || !book.authorLastName || !book.genre || !book.publisher || !book.yearPublished) {
-      res.status(400).json({ error: "Missing required fields" });
-      return;
-    }
+    
 
     // Get a response from the database
     const response = await mongodb.getDb().db('Library').collection('books').insertOne(book);
