@@ -59,7 +59,8 @@ PUT https://libraryrender.onrender.com/authors/65d150a463e2f5eee5f0b50f HTTP/1.1
 
 {
       "firstName": "Jim",
-      "lastName": "Butcher"
+      "lastName": "Butcher",
+      "genre": "Steampunk"
       
 }
 
