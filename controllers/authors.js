@@ -45,7 +45,12 @@ const getSingle = async (req, res, next) => {
 // Create new author - Yay for new authors
 
 const newAuthor = async (req, res, next) => {
+  
   try {
+    if (!req.body.authorFirstName || !req.body.authorLastName || !req.body.genre) {
+      res.status(400).json({ error: "Missing required fields" });
+      return;
+    }
     const author = {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
@@ -67,6 +72,10 @@ const newAuthor = async (req, res, next) => {
 // Update an author
 const updateAuthor = async (req, res, next) => {
   try {
+    if (!req.body.authorFirstName || !req.body.authorLastName || !req.body.genre) {
+      res.status(400).json({ error: "Missing required fields" });
+      return;
+    }
     const userId = new ObjectId(req.params.id);
     const author = {
       firstName: req.body.firstName,
